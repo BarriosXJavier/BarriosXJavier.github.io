@@ -11,6 +11,48 @@
     </head>
 
     <body>
+        <div class="container">
+            <div class="bubbles">
+                <span style="--i:5;"></span>
+                <span style="--i:8;"></span>
+                <span style="--i:4;"></span>
+                <span style="--i:9;"></span>
+                <span style="--i:7;"></span>
+                <span style="--i:11;"></span>
+                <span style="--i:5;"></span>
+                <span style="--i:9;"></span>
+                <span style="--i:8;"></span>
+                <span style="--i:12;"></span>
+                <span style="--i:7;"></span>
+                <span style="--i:5;"></span>
+                <span style="--i:8;"></span>
+                <span style="--i:9;"></span>
+                <span style="--i:12;"></span>
+                <span style="--i:6;"></span>
+                <span style="--i:8;"></span>
+                <span style="--i:15;"></span>
+                <span style="--i:5;"></span>
+                <span style="--i:9;"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:11;"></span>
+                <span style="--i:14;"></span>
+                <span style="--i:5;"></span>
+                <span style="--i:8;"></span>
+                <span style="--i:9;"></span>
+                <span style="--i:6;"></span>
+                <span style="--i:15;"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:7;"></span>
+                <span style="--i:8;"></span>
+                <span style="--i:9;"></span>
+                <span style="--i:6;"></span>
+                <span style="--i:15;"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:7;"></span>
+                <span style="--i:8;"></span>
+
+            </div>
+        </div>
         <header>
             <span id="logo">CodeByDave</span>
         </header>
@@ -19,19 +61,21 @@
                 <li><a href="#intro">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#job_fields">Services</a></li>
-                <li><a href="#contacts">Contact Me</a></li>
+                <li><a href="#contacts">Contacts</a></li>
 
             </ul>
         </nav>
+
         <div class="backgnd_img"></div>
         <section id="intro">
-            <h2>UX|UI Designer</h2>
+            <h2>Front End & UX|UI Design</h2>
             <h4> Hi, my name is Dave. I'm a front<br> end developer</h4>
         </section>
         <div id="about">
             <h2>About me</h2>
             <div class="about_text">
-                <p>Hello there, my name is Dave and I am a Front End developer. I use HTML, CSS/Tailwind and Javascript/React to
+                <p>Hello there, my name is Dave and I am a Front End developer. I use HTML, CSS/Tailwind and
+                    Javascript/React to
                     make beautiful, authentic and fully responsive websites.
                 </p>
             </div>
@@ -40,17 +84,19 @@
             <div class="websites">
                 <i class="fa fa-code" aria-hidden="true"></i>
                 <h2>Website design</h2>
-                <p>By combining a good look and responsiveness, you can take your personal blog or business website to another level!</p>
+                <p>By combining a good look and responsiveness, you can take your personal blog or business website to
+                    another level!</p>
             </div>
             <div class="webapps">
                 <i class="fa-solid fa-mobile-notch"></i>
                 <h2>Web Apps</h2>
-                <p>Want to take your business to the next level? A web app is the way to go. Take advantage of web apps's effectiveness. </p>
+                <p>Want your business online? A web app is the way to go. Take advantage of web
+                    apps's effectiveness. </p>
             </div>
             <div class="projects">
                 <i class="fa-solid fa-laptop-code"></i>
                 <h2>Projects</h2>
-                <p>Some of my other projects will be uploaded to my github profile with the link provided.</p>
+                <p>Some of my projects will be uploaded to my github profile with the link provided.</p>
             </div>
         </section>
         <section id="contacts">
@@ -63,30 +109,20 @@
             <div class="contact_form">
                 <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Enter your name" required>
-                    <input type="email" name="Email" placeholder="Enter your email" required>
+                    <input type="Email" name="Email" placeholder="Enter your email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <button type="submit" class="btn btn2" onclick="buttonClick()">Submit</button>
                 </form>
                 <span id="msg"></span>
             </div>
         </section>
         <footer class="copyright">
-            <p>Copyright&copy; Web design by Dave. All Rights Reserved. 2022</p>
+            <p>Copyright&copy; Web design by Dave. All Rights Reserved. <span id="footer_date"></span></p>
         </footer>
 
     </body>
-    
-    <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycby4hmwJzNmbzJW8XRfZnhyQpq3N_Ql2revFwfOfu7FhKH1iJsx7Ky7VPog-dcEWEuhnyA/exec'
-  const form = document.forms['submit-to-google-sheet']
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
+    <script src="main.js"></script>
 
 
 </html>
